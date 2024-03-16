@@ -1,0 +1,125 @@
+:root 
+{
+    --Nutmeg: hsl(14, 45%, 36%);
+    --DarkRaspberry: hsl(332, 51%, 32%);
+
+
+    --White: hsl(0, 0%, 100%);
+    --RoseWhite: hsl(330, 100%, 98%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --LightGrey: hsl(30, 18%, 87%);
+    --WengeBrown: hsl(30, 10%, 34%);
+    --DarkCharcoal: hsl(24, 5%, 18%);
+
+    --font-1: "Young Serif", serif;
+    --font-2: "Outfit", sans-serif;
+}
+
+body {
+    padding: 2em 5%;
+    background-color: var(--Eggshell);
+    font-family: var(--font-2);
+    color: var(--WengeBrown);
+    line-height: 1.6;
+}
+
+li {
+    padding-left: 1.56em;
+}
+
+li:not(:last-child) {
+    margin-bottom: .3em;
+}
+.recipe {
+    max-width: 740px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    padding: 2em;
+    background-color: var(--White);
+}
+
+.img {
+    border-radius: 15px;
+    width: 100%;
+}
+
+
+.title, .section_title {
+    font-family: var(--font-1);
+}
+
+.title {
+    color: var(--DarkCharcoal);
+}
+
+.preparation {
+    background-color: var(--RoseWhite);
+    padding: 1em;
+}
+
+.preparation_title {
+    color: var(--DarkRaspberry);
+    font-size: 1.3rem;
+}
+
+.preparation_item:not(:last-child)
+{
+    margin-bottom: .4em;
+}
+
+.preparation_item span{
+    font-weight: bold;
+}
+
+
+
+.section_title {
+    color: var(--Nutmeg);
+    font-weight: normal;
+    font-size: 1.9rem;
+}
+
+.section li::marker
+{
+    color: var(--Nutmeg);
+}
+
+.instructions_item span 
+{
+    font-weight: bold;
+}
+
+
+.nutrition_item 
+{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--LightGrey);
+    gap: 10em;
+    padding-left: 2em;
+}
+
+.nutrition_item:last-child {
+    border-bottom: none;
+}
+
+.nutrition_key {
+    width: 25%;
+}
+
+.nutrition_val 
+{
+    color: var(--Nutmeg);
+    font-weight: bold;
+}
+
+
+
+@media (min-width: 786px)
+{
+    .title {
+        font-size: 2.4rem;
+    }
+    
+}
