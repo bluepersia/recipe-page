@@ -16,11 +16,14 @@
 }
 
 body {
-    padding: 2em 5%;
     background-color: var(--Eggshell);
     font-family: var(--font-2);
     color: var(--WengeBrown);
     line-height: 1.6;
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
 }
 
 li {
@@ -32,10 +35,10 @@ li:not(:last-child) {
 }
 .recipe {
     max-width: 740px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     border-radius: 15px;
-    padding: 2em;
     background-color: var(--White);
 }
 
@@ -53,6 +56,9 @@ li:not(:last-child) {
     color: var(--DarkCharcoal);
 }
 
+.main {
+    padding: 0 2em 2em;
+}
 .preparation {
     background-color: var(--RoseWhite);
     padding: 1em;
@@ -93,10 +99,11 @@ li:not(:last-child) {
 
 .nutrition_item 
 {
-    display: flex;
+    display: grid;
     align-items: center;
     border-bottom: 1px solid var(--LightGrey);
-    gap: 10em;
+    grid-template-columns: 25% auto;
+    column-gap: 30%;
     padding-left: 2em;
 }
 
@@ -105,19 +112,28 @@ li:not(:last-child) {
 }
 
 .nutrition_key {
-    width: 25%;
+    width: 100%;
+    grid-column: 1 / 2;
 }
 
 .nutrition_val 
 {
     color: var(--Nutmeg);
     font-weight: bold;
+    text-align: left;
+    grid-column:  2 / -1;
 }
 
 
 
 @media (min-width: 786px)
 {
+    body {
+        padding: 7.6em 5%;
+    }
+    .header {
+        padding: 2em 2em 0;
+    }
     .title {
         font-size: 2.4rem;
     }
